@@ -1,0 +1,46 @@
+{ 
+    "searchBar": "div[id='entry_217822'] input[placeholder='Search For Products']",
+    "Phone":" Phone, Tablets & Ipod",
+    "itemName": "HTC Touch HD",
+    "SearchButton": "button[class='type-text']",
+     "product":"div[class='carousel-item active'] img[title='HTC Touch HD']",
+    "cartIcon": ".btn-cart.cart-28",
+    "checkoutButton":"a[class='btn btn-secondary btn-block']",
+    "firstNameField":"#input-payment-firstname",
+    "firstName":"Navy",
+    "lastNameField":"#input-payment-lastname",
+    "lastname":"Doe",
+    "emailField":"#input-payment-email",
+    "telephoneField":"#input-payment-telephone",
+    "telephone":"+2348176765667",
+    "passwordField":"#input-payment-password",
+    "password":"Qwerty1@",
+    "comfirmPasswordField":"#input-payment-confirm",
+    "companyField":"#input-payment-company",
+    "company":"Test-Institute",
+    "addressField":"#input-payment-address-1",
+    "address":"4 Jonney Doe Street",
+    "cityField":"#input-payment-city",
+    "city":"Ikeja",
+    "postCodeField":"#input-payment-postcode",
+    "postCode":"120001",
+    "countryField":"#input-payment-country",
+    "country":"Nigeria",
+    "regionField":"#input-payment-zone",
+    "region":"Lagos",
+    "newsletter_checkbox":"label[for='input-newsletter']",
+    "privacyPolicy_checkbox":"label[for='input-account-agree']",
+    "termsCondition_checkboc":"label[for='input-agree']",
+    "continueButton":"#button-save",
+    "confirmOrderPageTitle":"Confirm Order",
+    "productName":"Palm Treo Pro",
+    "confirmOrderButton":"#button-confirm",
+    "successMessage":"Your order has been placed!"
+
+  
+
+
+    
+
+    
+}

@@ -1,0 +1,1411 @@
+{
+	"info": {
+		"_postman_id": "70294097-59f4-44ed-84a8-ad58a6898789",
+		"name": "API Automation Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10059087",
+		"_collection_link": "https://martian-capsule-601551.postman.co/workspace/Team-Workspace~60288849-2169-410c-8d53-184c25087d51/collection/10059087-70294097-59f4-44ed-84a8-ad58a6898789?action=share&source=collection_link&creator=10059087"
+	},
+	"item": [
+		{
+			"name": "Question 5",
+			"item": [
+				{
+					"name": "Fetch all post",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Check if the request was successful (status code 200)",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"//check if the response body is a valid JSON",
+									"pm.test(\"Response body is a JSON\", function () {",
+									"    pm.response.to.be.json; ",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{typecode_baseURL}}/posts",
+							"host": [
+								"{{typecode_baseURL}}"
+							],
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{typecode_baseURL}}/posts",
+									"host": [
+										"{{typecode_baseURL}}"
+									],
+									"path": [
+										"posts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 26 Feb 2024 02:47:00 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Report-To",
+									"value": "{\"group\":\"heroku-nel\",\"max_age\":3600,\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?ts=1707452588&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=eJCkdtIc8iJ2BuGrKLTITyzNs2ZELLAqYcJ8Qtky6EE%3D\"}]}"
+								},
+								{
+									"key": "Reporting-Endpoints",
+									"value": "heroku-nel=https://nel.heroku.com/reports?ts=1707452588&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=eJCkdtIc8iJ2BuGrKLTITyzNs2ZELLAqYcJ8Qtky6EE%3D"
+								},
+								{
+									"key": "Nel",
+									"value": "{\"report_to\":\"heroku-nel\",\"max_age\":3600,\"success_fraction\":0.005,\"failure_fraction\":0.05,\"response_headers\":[\"Via\"]}"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Ratelimit-Limit",
+									"value": "1000"
+								},
+								{
+									"key": "X-Ratelimit-Remaining",
+									"value": "999"
+								},
+								{
+									"key": "X-Ratelimit-Reset",
+									"value": "1707452614"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin, Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=43200"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"6b80-Ybsq/K6GwwqrYkAsFxqDXGC7DoM\""
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "HIT"
+								},
+								{
+									"key": "Age",
+									"value": "8209"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "85b4dc640aa72003-IAD"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"userId\": 1,\n        \"id\": 1,\n        \"title\": \"sunt aut facere repellat provident occaecati excepturi optio reprehenderit\",\n        \"body\": \"quia et suscipit\\nsuscipit recusandae consequuntur expedita et cum\\nreprehenderit molestiae ut ut quas totam\\nnostrum rerum est autem sunt rem eveniet architecto\"\n    },\n    {\n        \"userId\": 1,\n        \"id\": 2,\n        \"title\": \"qui est esse\",\n        \"body\": \"est rerum tempore vitae\\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\\nqui aperiam non debitis possimus qui neque nisi nulla\"\n    },\n    {\n        \"userId\": 1,\n        \"id\": 3,\n        \"title\": \"ea molestias quasi exercitationem repellat qui ipsa sit aut\",\n        \"body\": \"et iusto sed quo iure\\nvoluptatem occaecati omnis eligendi aut ad\\nvoluptatem doloribus vel accusantium quis pariatur\\nmolestiae porro eius odio et labore et velit aut\"\n    },\n    {\n        \"userId\": 1,\n        \"id\": 4,\n        \"title\": \"eum et est occaecati\",\n        \"body\": \"ullam et saepe reiciendis voluptatem adipisci\\nsit amet autem assumenda provident rerum culpa\\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\\nquis sunt voluptatem rerum illo velit\"\n    },\n    {\n        \"userId\": 1,\n        \"id\": 5,\n        \"title\": \"nesciunt quas odio\",\n        \"body\": \"repudiandae veniam quaerat sunt sed\\nalias aut fugiat sit autem sed est\\nvoluptatem omnis possimus esse voluptatibus quis\\nest aut tenetur dolor neque\"\n    },\n    {\n        \"userId\": 1,\n        \"id\": 6,\n        \"title\": \"dolorem eum magni eos aperiam quia\",\n        \"body\": \"ut aspernatur corporis harum nihil quis provident sequi\\nmollitia nobis aliquid molestiae\\nperspiciatis et ea nemo ab reprehenderit accusantium quas\\nvoluptate dolores velit et doloremque molestiae\"\n    },\n    {\n        \"userId\": 1,\n        \"id\": 7,\n        \"title\": \"magnam facilis autem\",\n        \"body\": \"dolore placeat quibusdam ea quo vitae\\nmagni quis enim qui quis quo nemo aut saepe\\nquidem repellat excepturi ut quia\\nsunt ut sequi eos ea sed quas\"\n    },\n    {\n        \"userId\": 1,\n        \"id\": 8,\n        \"title\": \"dolorem dolore est ipsam\",\n        \"body\": \"dignissimos aperiam dolorem qui eum\\nfacilis quibusdam animi sint suscipit qui sint possimus cum\\nquaerat magni maiores excepturi\\nipsam ut commodi dolor voluptatum modi aut vitae\"\n    },\n    {\n        \"userId\": 1,\n        \"id\": 9,\n        \"title\": \"nesciunt iure omnis dolorem tempora et accusantium\",\n        \"body\": \"consectetur animi nesciunt iure dolore\\nenim quia ad\\nveniam autem ut quam aut nobis\\net est aut quod aut provident voluptas autem voluptas\"\n    },\n    {\n        \"userId\": 1,\n        \"id\": 10,\n        \"title\": \"optio molestias id quia eum\",\n        \"body\": \"quo et expedita modi cum officia vel magni\\ndoloribus qui repudiandae\\nvero nisi sit\\nquos veniam quod sed accusamus veritatis error\"\n    },\n    {\n        \"userId\": 2,\n        \"id\": 11,\n        \"title\": \"et ea vero quia laudantium autem\",\n        \"body\": \"delectus reiciendis molestiae occaecati non minima eveniet qui voluptatibus\\naccusamus in eum beatae sit\\nvel qui neque voluptates ut commodi qui incidunt\\nut animi commodi\"\n    },\n    {\n        \"userId\": 2,\n        \"id\": 12,\n        \"title\": \"in quibusdam tempore odit est dolorem\",\n        \"body\": \"itaque id aut magnam\\npraesentium quia et ea odit et ea voluptas et\\nsapiente quia nihil amet occaecati quia id voluptatem\\nincidunt ea est distinctio odio\"\n    },\n    {\n        \"userId\": 2,\n        \"id\": 13,\n        \"title\": \"dolorum ut in voluptas mollitia et saepe quo animi\",\n        \"body\": \"aut dicta possimus sint mollitia voluptas commodi quo doloremque\\niste corrupti reiciendis voluptatem eius rerum\\nsit cumque quod eligendi laborum minima\\nperferendis recusandae assumenda consectetur porro architecto ipsum ipsam\"\n    },\n    {\n        \"userId\": 2,\n        \"id\": 14,\n        \"title\": \"voluptatem eligendi optio\",\n        \"body\": \"fuga et accusamus dolorum perferendis illo voluptas\\nnon doloremque neque facere\\nad qui dolorum molestiae beatae\\nsed aut voluptas totam sit illum\"\n    },\n    {\n        \"userId\": 2,\n        \"id\": 15,\n        \"title\": \"eveniet quod temporibus\",\n        \"body\": \"reprehenderit quos placeat\\nvelit minima officia dolores impedit repudiandae molestiae nam\\nvoluptas recusandae quis delectus\\nofficiis harum fugiat vitae\"\n    },\n    {\n        \"userId\": 2,\n        \"id\": 16,\n        \"title\": \"sint suscipit perspiciatis velit dolorum rerum ipsa laboriosam odio\",\n        \"body\": \"suscipit nam nisi quo aperiam aut\\nasperiores eos fugit maiores voluptatibus quia\\nvoluptatem quis ullam qui in alias quia est\\nconsequatur magni mollitia accusamus ea nisi voluptate dicta\"\n    },\n    {\n        \"userId\": 2,\n        \"id\": 17,\n        \"title\": \"fugit voluptas sed molestias voluptatem provident\",\n        \"body\": \"eos voluptas et aut odit natus earum\\naspernatur fuga molestiae ullam\\ndeserunt ratione qui eos\\nqui nihil ratione nemo velit ut aut id quo\"\n    },\n    {\n        \"userId\": 2,\n        \"id\": 18,\n        \"title\": \"voluptate et itaque vero tempora molestiae\",\n        \"body\": \"eveniet quo quis\\nlaborum totam consequatur non dolor\\nut et est repudiandae\\nest voluptatem vel debitis et magnam\"\n    },\n    {\n        \"userId\": 2,\n        \"id\": 19,\n        \"title\": \"adipisci placeat illum aut reiciendis qui\",\n        \"body\": \"illum quis cupiditate provident sit magnam\\nea sed aut omnis\\nveniam maiores ullam consequatur atque\\nadipisci quo iste expedita sit quos voluptas\"\n    },\n    {\n        \"userId\": 2,\n        \"id\": 20,\n        \"title\": \"doloribus ad provident suscipit at\",\n        \"body\": \"qui consequuntur ducimus possimus quisquam amet similique\\nsuscipit porro ipsam amet\\neos veritatis officiis exercitationem vel fugit aut necessitatibus totam\\nomnis rerum consequatur expedita quidem cumque explicabo\"\n    },\n    {\n        \"userId\": 3,\n        \"id\": 21,\n        \"title\": \"asperiores ea ipsam voluptatibus modi minima quia sint\",\n        \"body\": \"repellat aliquid praesentium dolorem quo\\nsed totam minus non itaque\\nnihil labore molestiae sunt dolor eveniet hic recusandae veniam\\ntempora et tenetur expedita sunt\"\n    },\n    {\n        \"userId\": 3,\n        \"id\": 22,\n        \"title\": \"dolor sint quo a velit explicabo quia nam\",\n        \"body\": \"eos qui et ipsum ipsam suscipit aut\\nsed omnis non odio\\nexpedita earum mollitia molestiae aut atque rem suscipit\\nnam impedit esse\"\n    },\n    {\n        \"userId\": 3,\n        \"id\": 23,\n        \"title\": \"maxime id vitae nihil numquam\",\n        \"body\": \"veritatis unde neque eligendi\\nquae quod architecto quo neque vitae\\nest illo sit tempora doloremque fugit quod\\net et vel beatae sequi ullam sed tenetur perspiciatis\"\n    },\n    {\n        \"userId\": 3,\n        \"id\": 24,\n        \"title\": \"autem hic labore sunt dolores incidunt\",\n        \"body\": \"enim et ex nulla\\nomnis voluptas quia qui\\nvoluptatem consequatur numquam aliquam sunt\\ntotam recusandae id dignissimos aut sed asperiores deserunt\"\n    },\n    {\n        \"userId\": 3,\n        \"id\": 25,\n        \"title\": \"rem alias distinctio quo quis\",\n        \"body\": \"ullam consequatur ut\\nomnis quis sit vel consequuntur\\nipsa eligendi ipsum molestiae et omnis error nostrum\\nmolestiae illo tempore quia et distinctio\"\n    },\n    {\n        \"userId\": 3,\n        \"id\": 26,\n        \"title\": \"est et quae odit qui non\",\n        \"body\": \"similique esse doloribus nihil accusamus\\nomnis dolorem fuga consequuntur reprehenderit fugit recusandae temporibus\\nperspiciatis cum ut laudantium\\nomnis aut molestiae vel vero\"\n    },\n    {\n        \"userId\": 3,\n        \"id\": 27,\n        \"title\": \"quasi id et eos tenetur aut quo autem\",\n        \"body\": \"eum sed dolores ipsam sint possimus debitis occaecati\\ndebitis qui qui et\\nut placeat enim earum aut odit facilis\\nconsequatur suscipit necessitatibus rerum sed inventore temporibus consequatur\"\n    },\n    {\n        \"userId\": 3,\n        \"id\": 28,\n        \"title\": \"delectus ullam et corporis nulla voluptas sequi\",\n        \"body\": \"non et quaerat ex quae ad maiores\\nmaiores recusandae totam aut blanditiis mollitia quas illo\\nut voluptatibus voluptatem\\nsimilique nostrum eum\"\n    },\n    {\n        \"userId\": 3,\n        \"id\": 29,\n        \"title\": \"iusto eius quod necessitatibus culpa ea\",\n        \"body\": \"odit magnam ut saepe sed non qui\\ntempora atque nihil\\naccusamus illum doloribus illo dolor\\neligendi repudiandae odit magni similique sed cum maiores\"\n    },\n    {\n        \"userId\": 3,\n        \"id\": 30,\n        \"title\": \"a quo magni similique perferendis\",\n        \"body\": \"alias dolor cumque\\nimpedit blanditiis non eveniet odio maxime\\nblanditiis amet eius quis tempora quia autem rem\\na provident perspiciatis quia\"\n    },\n    {\n        \"userId\": 4,\n        \"id\": 31,\n        \"title\": \"ullam ut quidem id aut vel consequuntur\",\n        \"body\": \"debitis eius sed quibusdam non quis consectetur vitae\\nimpedit ut qui consequatur sed aut in\\nquidem sit nostrum et maiores adipisci atque\\nquaerat voluptatem adipisci repudiandae\"\n    },\n    {\n        \"userId\": 4,\n        \"id\": 32,\n        \"title\": \"doloremque illum aliquid sunt\",\n        \"body\": \"deserunt eos nobis asperiores et hic\\nest debitis repellat molestiae optio\\nnihil ratione ut eos beatae quibusdam distinctio maiores\\nearum voluptates et aut adipisci ea maiores voluptas maxime\"\n    },\n    {\n        \"userId\": 4,\n        \"id\": 33,\n        \"title\": \"qui explicabo molestiae dolorem\",\n        \"body\": \"rerum ut et numquam laborum odit est sit\\nid qui sint in\\nquasi tenetur tempore aperiam et quaerat qui in\\nrerum officiis sequi cumque quod\"\n    },\n    {\n        \"userId\": 4,\n        \"id\": 34,\n        \"title\": \"magnam ut rerum iure\",\n        \"body\": \"ea velit perferendis earum ut voluptatem voluptate itaque iusto\\ntotam pariatur in\\nnemo voluptatem voluptatem autem magni tempora minima in\\nest distinctio qui assumenda accusamus dignissimos officia nesciunt nobis\"\n    },\n    {\n        \"userId\": 4,\n        \"id\": 35,\n        \"title\": \"id nihil consequatur molestias animi provident\",\n        \"body\": \"nisi error delectus possimus ut eligendi vitae\\nplaceat eos harum cupiditate facilis reprehenderit voluptatem beatae\\nmodi ducimus quo illum voluptas eligendi\\net nobis quia fugit\"\n    },\n    {\n        \"userId\": 4,\n        \"id\": 36,\n        \"title\": \"fuga nam accusamus voluptas reiciendis itaque\",\n        \"body\": \"ad mollitia et omnis minus architecto odit\\nvoluptas doloremque maxime aut non ipsa qui alias veniam\\nblanditiis culpa aut quia nihil cumque facere et occaecati\\nqui aspernatur quia eaque ut aperiam inventore\"\n    },\n    {\n        \"userId\": 4,\n        \"id\": 37,\n        \"title\": \"provident vel ut sit ratione est\",\n        \"body\": \"debitis et eaque non officia sed nesciunt pariatur vel\\nvoluptatem iste vero et ea\\nnumquam aut expedita ipsum nulla in\\nvoluptates omnis consequatur aut enim officiis in quam qui\"\n    },\n    {\n        \"userId\": 4,\n        \"id\": 38,\n        \"title\": \"explicabo et eos deleniti nostrum ab id repellendus\",\n        \"body\": \"animi esse sit aut sit nesciunt assumenda eum voluptas\\nquia voluptatibus provident quia necessitatibus ea\\nrerum repudiandae quia voluptatem delectus fugit aut id quia\\nratione optio eos iusto veniam iure\"\n    },\n    {\n        \"userId\": 4,\n        \"id\": 39,\n        \"title\": \"eos dolorem iste accusantium est eaque quam\",\n        \"body\": \"corporis rerum ducimus vel eum accusantium\\nmaxime aspernatur a porro possimus iste omnis\\nest in deleniti asperiores fuga aut\\nvoluptas sapiente vel dolore minus voluptatem incidunt ex\"\n    },\n    {\n        \"userId\": 4,\n        \"id\": 40,\n        \"title\": \"enim quo cumque\",\n        \"body\": \"ut voluptatum aliquid illo tenetur nemo sequi quo facilis\\nipsum rem optio mollitia quas\\nvoluptatem eum voluptas qui\\nunde omnis voluptatem iure quasi maxime voluptas nam\"\n    },\n    {\n        \"userId\": 5,\n        \"id\": 41,\n        \"title\": \"non est facere\",\n        \"body\": \"molestias id nostrum\\nexcepturi molestiae dolore omnis repellendus quaerat saepe\\nconsectetur iste quaerat tenetur asperiores accusamus ex ut\\nnam quidem est ducimus sunt debitis saepe\"\n    },\n    {\n        \"userId\": 5,\n        \"id\": 42,\n        \"title\": \"commodi ullam sint et excepturi error explicabo praesentium voluptas\",\n        \"body\": \"odio fugit voluptatum ducimus earum autem est incidunt voluptatem\\nodit reiciendis aliquam sunt sequi nulla dolorem\\nnon facere repellendus voluptates quia\\nratione harum vitae ut\"\n    },\n    {\n        \"userId\": 5,\n        \"id\": 43,\n        \"title\": \"eligendi iste nostrum consequuntur adipisci praesentium sit beatae perferendis\",\n        \"body\": \"similique fugit est\\nillum et dolorum harum et voluptate eaque quidem\\nexercitationem quos nam commodi possimus cum odio nihil nulla\\ndolorum exercitationem magnam ex et a et distinctio debitis\"\n    },\n    {\n        \"userId\": 5,\n        \"id\": 44,\n        \"title\": \"optio dolor molestias sit\",\n        \"body\": \"temporibus est consectetur dolore\\net libero debitis vel velit laboriosam quia\\nipsum quibusdam qui itaque fuga rem aut\\nea et iure quam sed maxime ut distinctio quae\"\n    },\n    {\n        \"userId\": 5,\n        \"id\": 45,\n        \"title\": \"ut numquam possimus omnis eius suscipit laudantium iure\",\n        \"body\": \"est natus reiciendis nihil possimus aut provident\\nex et dolor\\nrepellat pariatur est\\nnobis rerum repellendus dolorem autem\"\n    },\n    {\n        \"userId\": 5,\n        \"id\": 46,\n        \"title\": \"aut quo modi neque nostrum ducimus\",\n        \"body\": \"voluptatem quisquam iste\\nvoluptatibus natus officiis facilis dolorem\\nquis quas ipsam\\nvel et voluptatum in aliquid\"\n    },\n    {\n        \"userId\": 5,\n        \"id\": 47,\n        \"title\": \"quibusdam cumque rem aut deserunt\",\n        \"body\": \"voluptatem assumenda ut qui ut cupiditate aut impedit veniam\\noccaecati nemo illum voluptatem laudantium\\nmolestiae beatae rerum ea iure soluta nostrum\\neligendi et voluptate\"\n    },\n    {\n        \"userId\": 5,\n        \"id\": 48,\n        \"title\": \"ut voluptatem illum ea doloribus itaque eos\",\n        \"body\": \"voluptates quo voluptatem facilis iure occaecati\\nvel assumenda rerum officia et\\nillum perspiciatis ab deleniti\\nlaudantium repellat ad ut et autem reprehenderit\"\n    },\n    {\n        \"userId\": 5,\n        \"id\": 49,\n        \"title\": \"laborum non sunt aut ut assumenda perspiciatis voluptas\",\n        \"body\": \"inventore ab sint\\nnatus fugit id nulla sequi architecto nihil quaerat\\neos tenetur in in eum veritatis non\\nquibusdam officiis aspernatur cumque aut commodi aut\"\n    },\n    {\n        \"userId\": 5,\n        \"id\": 50,\n        \"title\": \"repellendus qui recusandae incidunt voluptates tenetur qui omnis exercitationem\",\n        \"body\": \"error suscipit maxime adipisci consequuntur recusandae\\nvoluptas eligendi et est et voluptates\\nquia distinctio ab amet quaerat molestiae et vitae\\nadipisci impedit sequi nesciunt quis consectetur\"\n    },\n    {\n        \"userId\": 6,\n        \"id\": 51,\n        \"title\": \"soluta aliquam aperiam consequatur illo quis voluptas\",\n        \"body\": \"sunt dolores aut doloribus\\ndolore doloribus voluptates tempora et\\ndoloremque et quo\\ncum asperiores sit consectetur dolorem\"\n    },\n    {\n        \"userId\": 6,\n        \"id\": 52,\n        \"title\": \"qui enim et consequuntur quia animi quis voluptate quibusdam\",\n        \"body\": \"iusto est quibusdam fuga quas quaerat molestias\\na enim ut sit accusamus enim\\ntemporibus iusto accusantium provident architecto\\nsoluta esse reprehenderit qui laborum\"\n    },\n    {\n        \"userId\": 6,\n        \"id\": 53,\n        \"title\": \"ut quo aut ducimus alias\",\n        \"body\": \"minima harum praesentium eum rerum illo dolore\\nquasi exercitationem rerum nam\\nporro quis neque quo\\nconsequatur minus dolor quidem veritatis sunt non explicabo similique\"\n    },\n    {\n        \"userId\": 6,\n        \"id\": 54,\n        \"title\": \"sit asperiores ipsam eveniet odio non quia\",\n        \"body\": \"totam corporis dignissimos\\nvitae dolorem ut occaecati accusamus\\nex velit deserunt\\net exercitationem vero incidunt corrupti mollitia\"\n    },\n    {\n        \"userId\": 6,\n        \"id\": 55,\n        \"title\": \"sit vel voluptatem et non libero\",\n        \"body\": \"debitis excepturi ea perferendis harum libero optio\\neos accusamus cum fuga ut sapiente repudiandae\\net ut incidunt omnis molestiae\\nnihil ut eum odit\"\n    },\n    {\n        \"userId\": 6,\n        \"id\": 56,\n        \"title\": \"qui et at rerum necessitatibus\",\n        \"body\": \"aut est omnis dolores\\nneque rerum quod ea rerum velit pariatur beatae excepturi\\net provident voluptas corrupti\\ncorporis harum reprehenderit dolores eligendi\"\n    },\n    {\n        \"userId\": 6,\n        \"id\": 57,\n        \"title\": \"sed ab est est\",\n        \"body\": \"at pariatur consequuntur earum quidem\\nquo est laudantium soluta voluptatem\\nqui ullam et est\\net cum voluptas voluptatum repellat est\"\n    },\n    {\n        \"userId\": 6,\n        \"id\": 58,\n        \"title\": \"voluptatum itaque dolores nisi et quasi\",\n        \"body\": \"veniam voluptatum quae adipisci id\\net id quia eos ad et dolorem\\naliquam quo nisi sunt eos impedit error\\nad similique veniam\"\n    },\n    {\n        \"userId\": 6,\n        \"id\": 59,\n        \"title\": \"qui commodi dolor at maiores et quis id accusantium\",\n        \"body\": \"perspiciatis et quam ea autem temporibus non voluptatibus qui\\nbeatae a earum officia nesciunt dolores suscipit voluptas et\\nanimi doloribus cum rerum quas et magni\\net hic ut ut commodi expedita sunt\"\n    },\n    {\n        \"userId\": 6,\n        \"id\": 60,\n        \"title\": \"consequatur placeat omnis quisquam quia reprehenderit fugit veritatis facere\",\n        \"body\": \"asperiores sunt ab assumenda cumque modi velit\\nqui esse omnis\\nvoluptate et fuga perferendis voluptas\\nillo ratione amet aut et omnis\"\n    },\n    {\n        \"userId\": 7,\n        \"id\": 61,\n        \"title\": \"voluptatem doloribus consectetur est ut ducimus\",\n        \"body\": \"ab nemo optio odio\\ndelectus tenetur corporis similique nobis repellendus rerum omnis facilis\\nvero blanditiis debitis in nesciunt doloribus dicta dolores\\nmagnam minus velit\"\n    },\n    {\n        \"userId\": 7,\n        \"id\": 62,\n        \"title\": \"beatae enim quia vel\",\n        \"body\": \"enim aspernatur illo distinctio quae praesentium\\nbeatae alias amet delectus qui voluptate distinctio\\nodit sint accusantium autem omnis\\nquo molestiae omnis ea eveniet optio\"\n    },\n    {\n        \"userId\": 7,\n        \"id\": 63,\n        \"title\": \"voluptas blanditiis repellendus animi ducimus error sapiente et suscipit\",\n        \"body\": \"enim adipisci aspernatur nemo\\nnumquam omnis facere dolorem dolor ex quis temporibus incidunt\\nab delectus culpa quo reprehenderit blanditiis asperiores\\naccusantium ut quam in voluptatibus voluptas ipsam dicta\"\n    },\n    {\n        \"userId\": 7,\n        \"id\": 64,\n        \"title\": \"et fugit quas eum in in aperiam quod\",\n        \"body\": \"id velit blanditiis\\neum ea voluptatem\\nmolestiae sint occaecati est eos perspiciatis\\nincidunt a error provident eaque aut aut qui\"\n    },\n    {\n        \"userId\": 7,\n        \"id\": 65,\n        \"title\": \"consequatur id enim sunt et et\",\n        \"body\": \"voluptatibus ex esse\\nsint explicabo est aliquid cumque adipisci fuga repellat labore\\nmolestiae corrupti ex saepe at asperiores et perferendis\\nnatus id esse incidunt pariatur\"\n    },\n    {\n        \"userId\": 7,\n        \"id\": 66,\n        \"title\": \"repudiandae ea animi iusto\",\n        \"body\": \"officia veritatis tenetur vero qui itaque\\nsint non ratione\\nsed et ut asperiores iusto eos molestiae nostrum\\nveritatis quibusdam et nemo iusto saepe\"\n    },\n    {\n        \"userId\": 7,\n        \"id\": 67,\n        \"title\": \"aliquid eos sed fuga est maxime repellendus\",\n        \"body\": \"reprehenderit id nostrum\\nvoluptas doloremque pariatur sint et accusantium quia quod aspernatur\\net fugiat amet\\nnon sapiente et consequatur necessitatibus molestiae\"\n    },\n    {\n        \"userId\": 7,\n        \"id\": 68,\n        \"title\": \"odio quis facere architecto reiciendis optio\",\n        \"body\": \"magnam molestiae perferendis quisquam\\nqui cum reiciendis\\nquaerat animi amet hic inventore\\nea quia deleniti quidem saepe porro velit\"\n    },\n    {\n        \"userId\": 7,\n        \"id\": 69,\n        \"title\": \"fugiat quod pariatur odit minima\",\n        \"body\": \"officiis error culpa consequatur modi asperiores et\\ndolorum assumenda voluptas et vel qui aut vel rerum\\nvoluptatum quisquam perspiciatis quia rerum consequatur totam quas\\nsequi commodi repudiandae asperiores et saepe a\"\n    },\n    {\n        \"userId\": 7,\n        \"id\": 70,\n        \"title\": \"voluptatem laborum magni\",\n        \"body\": \"sunt repellendus quae\\nest asperiores aut deleniti esse accusamus repellendus quia aut\\nquia dolorem unde\\neum tempora esse dolore\"\n    },\n    {\n        \"userId\": 8,\n        \"id\": 71,\n        \"title\": \"et iusto veniam et illum aut fuga\",\n        \"body\": \"occaecati a doloribus\\niste saepe consectetur placeat eum voluptate dolorem et\\nqui quo quia voluptas\\nrerum ut id enim velit est perferendis\"\n    },\n    {\n        \"userId\": 8,\n        \"id\": 72,\n        \"title\": \"sint hic doloribus consequatur eos non id\",\n        \"body\": \"quam occaecati qui deleniti consectetur\\nconsequatur aut facere quas exercitationem aliquam hic voluptas\\nneque id sunt ut aut accusamus\\nsunt consectetur expedita inventore velit\"\n    },\n    {\n        \"userId\": 8,\n        \"id\": 73,\n        \"title\": \"consequuntur deleniti eos quia temporibus ab aliquid at\",\n        \"body\": \"voluptatem cumque tenetur consequatur expedita ipsum nemo quia explicabo\\naut eum minima consequatur\\ntempore cumque quae est et\\net in consequuntur voluptatem voluptates aut\"\n    },\n    {\n        \"userId\": 8,\n        \"id\": 74,\n        \"title\": \"enim unde ratione doloribus quas enim ut sit sapiente\",\n        \"body\": \"odit qui et et necessitatibus sint veniam\\nmollitia amet doloremque molestiae commodi similique magnam et quam\\nblanditiis est itaque\\nquo et tenetur ratione occaecati molestiae tempora\"\n    },\n    {\n        \"userId\": 8,\n        \"id\": 75,\n        \"title\": \"dignissimos eum dolor ut enim et delectus in\",\n        \"body\": \"commodi non non omnis et voluptas sit\\nautem aut nobis magnam et sapiente voluptatem\\net laborum repellat qui delectus facilis temporibus\\nrerum amet et nemo voluptate expedita adipisci error dolorem\"\n    },\n    {\n        \"userId\": 8,\n        \"id\": 76,\n        \"title\": \"doloremque officiis ad et non perferendis\",\n        \"body\": \"ut animi facere\\ntotam iusto tempore\\nmolestiae eum aut et dolorem aperiam\\nquaerat recusandae totam odio\"\n    },\n    {\n        \"userId\": 8,\n        \"id\": 77,\n        \"title\": \"necessitatibus quasi exercitationem odio\",\n        \"body\": \"modi ut in nulla repudiandae dolorum nostrum eos\\naut consequatur omnis\\nut incidunt est omnis iste et quam\\nvoluptates sapiente aliquam asperiores nobis amet corrupti repudiandae provident\"\n    },\n    {\n        \"userId\": 8,\n        \"id\": 78,\n        \"title\": \"quam voluptatibus rerum veritatis\",\n        \"body\": \"nobis facilis odit tempore cupiditate quia\\nassumenda doloribus rerum qui ea\\nillum et qui totam\\naut veniam repellendus\"\n    },\n    {\n        \"userId\": 8,\n        \"id\": 79,\n        \"title\": \"pariatur consequatur quia magnam autem omnis non amet\",\n        \"body\": \"libero accusantium et et facere incidunt sit dolorem\\nnon excepturi qui quia sed laudantium\\nquisquam molestiae ducimus est\\nofficiis esse molestiae iste et quos\"\n    },\n    {\n        \"userId\": 8,\n        \"id\": 80,\n        \"title\": \"labore in ex et explicabo corporis aut quas\",\n        \"body\": \"ex quod dolorem ea eum iure qui provident amet\\nquia qui facere excepturi et repudiandae\\nasperiores molestias provident\\nminus incidunt vero fugit rerum sint sunt excepturi provident\"\n    },\n    {\n        \"userId\": 9,\n        \"id\": 81,\n        \"title\": \"tempora rem veritatis voluptas quo dolores vero\",\n        \"body\": \"facere qui nesciunt est voluptatum voluptatem nisi\\nsequi eligendi necessitatibus ea at rerum itaque\\nharum non ratione velit laboriosam quis consequuntur\\nex officiis minima doloremque voluptas ut aut\"\n    },\n    {\n        \"userId\": 9,\n        \"id\": 82,\n        \"title\": \"laudantium voluptate suscipit sunt enim enim\",\n        \"body\": \"ut libero sit aut totam inventore sunt\\nporro sint qui sunt molestiae\\nconsequatur cupiditate qui iste ducimus adipisci\\ndolor enim assumenda soluta laboriosam amet iste delectus hic\"\n    },\n    {\n        \"userId\": 9,\n        \"id\": 83,\n        \"title\": \"odit et voluptates doloribus alias odio et\",\n        \"body\": \"est molestiae facilis quis tempora numquam nihil qui\\nvoluptate sapiente consequatur est qui\\nnecessitatibus autem aut ipsa aperiam modi dolore numquam\\nreprehenderit eius rem quibusdam\"\n    },\n    {\n        \"userId\": 9,\n        \"id\": 84,\n        \"title\": \"optio ipsam molestias necessitatibus occaecati facilis veritatis dolores aut\",\n        \"body\": \"sint molestiae magni a et quos\\neaque et quasi\\nut rerum debitis similique veniam\\nrecusandae dignissimos dolor incidunt consequatur odio\"\n    },\n    {\n        \"userId\": 9,\n        \"id\": 85,\n        \"title\": \"dolore veritatis porro provident adipisci blanditiis et sunt\",\n        \"body\": \"similique sed nisi voluptas iusto omnis\\nmollitia et quo\\nassumenda suscipit officia magnam sint sed tempora\\nenim provident pariatur praesentium atque animi amet ratione\"\n    },\n    {\n        \"userId\": 9,\n        \"id\": 86,\n        \"title\": \"placeat quia et porro iste\",\n        \"body\": \"quasi excepturi consequatur iste autem temporibus sed molestiae beatae\\net quaerat et esse ut\\nvoluptatem occaecati et vel explicabo autem\\nasperiores pariatur deserunt optio\"\n    },\n    {\n        \"userId\": 9,\n        \"id\": 87,\n        \"title\": \"nostrum quis quasi placeat\",\n        \"body\": \"eos et molestiae\\nnesciunt ut a\\ndolores perspiciatis repellendus repellat aliquid\\nmagnam sint rem ipsum est\"\n    },\n    {\n        \"userId\": 9,\n        \"id\": 88,\n        \"title\": \"sapiente omnis fugit eos\",\n        \"body\": \"consequatur omnis est praesentium\\nducimus non iste\\nneque hic deserunt\\nvoluptatibus veniam cum et rerum sed\"\n    },\n    {\n        \"userId\": 9,\n        \"id\": 89,\n        \"title\": \"sint soluta et vel magnam aut ut sed qui\",\n        \"body\": \"repellat aut aperiam totam temporibus autem et\\narchitecto magnam ut\\nconsequatur qui cupiditate rerum quia soluta dignissimos nihil iure\\ntempore quas est\"\n    },\n    {\n        \"userId\": 9,\n        \"id\": 90,\n        \"title\": \"ad iusto omnis odit dolor voluptatibus\",\n        \"body\": \"minus omnis soluta quia\\nqui sed adipisci voluptates illum ipsam voluptatem\\neligendi officia ut in\\neos soluta similique molestias praesentium blanditiis\"\n    },\n    {\n        \"userId\": 10,\n        \"id\": 91,\n        \"title\": \"aut amet sed\",\n        \"body\": \"libero voluptate eveniet aperiam sed\\nsunt placeat suscipit molestias\\nsimilique fugit nam natus\\nexpedita consequatur consequatur dolores quia eos et placeat\"\n    },\n    {\n        \"userId\": 10,\n        \"id\": 92,\n        \"title\": \"ratione ex tenetur perferendis\",\n        \"body\": \"aut et excepturi dicta laudantium sint rerum nihil\\nlaudantium et at\\na neque minima officia et similique libero et\\ncommodi voluptate qui\"\n    },\n    {\n        \"userId\": 10,\n        \"id\": 93,\n        \"title\": \"beatae soluta recusandae\",\n        \"body\": \"dolorem quibusdam ducimus consequuntur dicta aut quo laboriosam\\nvoluptatem quis enim recusandae ut sed sunt\\nnostrum est odit totam\\nsit error sed sunt eveniet provident qui nulla\"\n    },\n    {\n        \"userId\": 10,\n        \"id\": 94,\n        \"title\": \"qui qui voluptates illo iste minima\",\n        \"body\": \"aspernatur expedita soluta quo ab ut similique\\nexpedita dolores amet\\nsed temporibus distinctio magnam saepe deleniti\\nomnis facilis nam ipsum natus sint similique omnis\"\n    },\n    {\n        \"userId\": 10,\n        \"id\": 95,\n        \"title\": \"id minus libero illum nam ad officiis\",\n        \"body\": \"earum voluptatem facere provident blanditiis velit laboriosam\\npariatur accusamus odio saepe\\ncumque dolor qui a dicta ab doloribus consequatur omnis\\ncorporis cupiditate eaque assumenda ad nesciunt\"\n    },\n    {\n        \"userId\": 10,\n        \"id\": 96,\n        \"title\": \"quaerat velit veniam amet cupiditate aut numquam ut sequi\",\n        \"body\": \"in non odio excepturi sint eum\\nlabore voluptates vitae quia qui et\\ninventore itaque rerum\\nveniam non exercitationem delectus aut\"\n    },\n    {\n        \"userId\": 10,\n        \"id\": 97,\n        \"title\": \"quas fugiat ut perspiciatis vero provident\",\n        \"body\": \"eum non blanditiis soluta porro quibusdam voluptas\\nvel voluptatem qui placeat dolores qui velit aut\\nvel inventore aut cumque culpa explicabo aliquid at\\nperspiciatis est et voluptatem dignissimos dolor itaque sit nam\"\n    },\n    {\n        \"userId\": 10,\n        \"id\": 98,\n        \"title\": \"laboriosam dolor voluptates\",\n        \"body\": \"doloremque ex facilis sit sint culpa\\nsoluta assumenda eligendi non ut eius\\nsequi ducimus vel quasi\\nveritatis est dolores\"\n    },\n    {\n        \"userId\": 10,\n        \"id\": 99,\n        \"title\": \"temporibus sit alias delectus eligendi possimus magni\",\n        \"body\": \"quo deleniti praesentium dicta non quod\\naut est molestias\\nmolestias et officia quis nihil\\nitaque dolorem quia\"\n    },\n    {\n        \"userId\": 10,\n        \"id\": 100,\n        \"title\": \"at nam consequatur ea labore ea harum\",\n        \"body\": \"cupiditate quo est a modi nesciunt soluta\\nipsa voluptas error itaque dicta in\\nautem qui minus magnam et distinctio eum\\naccusamus ratione error aut\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "fetch app post with userId 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// C for status code",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"   var responseBody = pm.response.json();",
+									"   // Check if all expected properties are present in the response",
+									"    var expectedProperties = ['userId', 'id', 'title', 'body'];",
+									"    expectedProperties.forEach(function (property) {",
+									"        pm.test(`Response body contains property \"${property}\"`, function () {",
+									"            pm.expect(responseBody).to.have.property(property);",
+									"        });",
+									"    });",
+									"",
+									"",
+									"// Count the number of posts made by userId 1",
+									"const postCount = responseBody.length;",
+									"",
+									"// Log the number of posts made by userId 1",
+									"console.log(`Number of posts made by userId 1: ${postCount}`);",
+									"",
+									"// Check if at least one post is made by userId 1",
+									"pm.test(\"At least one post made by userId 1\", function () {",
+									"    pm.expect(postCount).to.be.at.least(1);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{typecode_baseURL}}/posts/1",
+							"host": [
+								"{{typecode_baseURL}}"
+							],
+							"path": [
+								"posts",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{typecode_baseURL}}/posts/1",
+									"host": [
+										"{{typecode_baseURL}}"
+									],
+									"path": [
+										"posts",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 26 Feb 2024 02:41:18 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Report-To",
+									"value": "{\"group\":\"heroku-nel\",\"max_age\":3600,\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?ts=1703053925&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=HyUC2Az%2FCwdY40mh6VHI9TH%2B3pOlac%2BzK6wFHJpgGH4%3D\"}]}"
+								},
+								{
+									"key": "Reporting-Endpoints",
+									"value": "heroku-nel=https://nel.heroku.com/reports?ts=1703053925&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=HyUC2Az%2FCwdY40mh6VHI9TH%2B3pOlac%2BzK6wFHJpgGH4%3D"
+								},
+								{
+									"key": "Nel",
+									"value": "{\"report_to\":\"heroku-nel\",\"max_age\":3600,\"success_fraction\":0.005,\"failure_fraction\":0.05,\"response_headers\":[\"Via\"]}"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Ratelimit-Limit",
+									"value": "1000"
+								},
+								{
+									"key": "X-Ratelimit-Remaining",
+									"value": "999"
+								},
+								{
+									"key": "X-Ratelimit-Reset",
+									"value": "1703053953"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin, Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=43200"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"124-yiKdLzqO5gfBrJFrcdJ8Yq0LGnU\""
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "HIT"
+								},
+								{
+									"key": "Age",
+									"value": "7983"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "85b4d40b7a8b2017-IAD"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"userId\": 1,\n    \"id\": 1,\n    \"title\": \"sunt aut facere repellat provident occaecati excepturi optio reprehenderit\",\n    \"body\": \"quia et suscipit\\nsuscipit recusandae consequuntur expedita et cum\\nreprehenderit molestiae ut ut quas totam\\nnostrum rerum est autem sunt rem eveniet architecto\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Question 6",
+			"item": [
+				{
+					"name": "fetch all users",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Check if the request was successful (status code 200)",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"//check if the response body is a valid JSON",
+									"pm.test(\"Response body is a JSON\", function () {",
+									"    pm.response.to.be.json; ",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{typecode_baseURL}}/users",
+							"host": [
+								"{{typecode_baseURL}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{typecode_baseURL}}/users",
+									"host": [
+										"{{typecode_baseURL}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 26 Feb 2024 02:47:32 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Report-To",
+									"value": "{\"group\":\"heroku-nel\",\"max_age\":3600,\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?ts=1706227410&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=YxmLOjtAoQJoZe2n8Mvyr8ewEOEhGeecQFguvQ6GsvA%3D\"}]}"
+								},
+								{
+									"key": "Reporting-Endpoints",
+									"value": "heroku-nel=https://nel.heroku.com/reports?ts=1706227410&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=YxmLOjtAoQJoZe2n8Mvyr8ewEOEhGeecQFguvQ6GsvA%3D"
+								},
+								{
+									"key": "Nel",
+									"value": "{\"report_to\":\"heroku-nel\",\"max_age\":3600,\"success_fraction\":0.005,\"failure_fraction\":0.05,\"response_headers\":[\"Via\"]}"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Ratelimit-Limit",
+									"value": "1000"
+								},
+								{
+									"key": "X-Ratelimit-Remaining",
+									"value": "995"
+								},
+								{
+									"key": "X-Ratelimit-Reset",
+									"value": "1706227453"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin, Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=43200"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"160d-1eMSsxeJRfnVLRBmYJSbCiJZ1qQ\""
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "HIT"
+								},
+								{
+									"key": "Age",
+									"value": "25800"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "85b4dd28fa6a2048-IAD"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Leanne Graham\",\n        \"username\": \"Bret\",\n        \"email\": \"Sincere@april.biz\",\n        \"address\": {\n            \"street\": \"Kulas Light\",\n            \"suite\": \"Apt. 556\",\n            \"city\": \"Gwenborough\",\n            \"zipcode\": \"92998-3874\",\n            \"geo\": {\n                \"lat\": \"-37.3159\",\n                \"lng\": \"81.1496\"\n            }\n        },\n        \"phone\": \"1-770-736-8031 x56442\",\n        \"website\": \"hildegard.org\",\n        \"company\": {\n            \"name\": \"Romaguera-Crona\",\n            \"catchPhrase\": \"Multi-layered client-server neural-net\",\n            \"bs\": \"harness real-time e-markets\"\n        }\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Ervin Howell\",\n        \"username\": \"Antonette\",\n        \"email\": \"Shanna@melissa.tv\",\n        \"address\": {\n            \"street\": \"Victor Plains\",\n            \"suite\": \"Suite 879\",\n            \"city\": \"Wisokyburgh\",\n            \"zipcode\": \"90566-7771\",\n            \"geo\": {\n                \"lat\": \"-43.9509\",\n                \"lng\": \"-34.4618\"\n            }\n        },\n        \"phone\": \"010-692-6593 x09125\",\n        \"website\": \"anastasia.net\",\n        \"company\": {\n            \"name\": \"Deckow-Crist\",\n            \"catchPhrase\": \"Proactive didactic contingency\",\n            \"bs\": \"synergize scalable supply-chains\"\n        }\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Clementine Bauch\",\n        \"username\": \"Samantha\",\n        \"email\": \"Nathan@yesenia.net\",\n        \"address\": {\n            \"street\": \"Douglas Extension\",\n            \"suite\": \"Suite 847\",\n            \"city\": \"McKenziehaven\",\n            \"zipcode\": \"59590-4157\",\n            \"geo\": {\n                \"lat\": \"-68.6102\",\n                \"lng\": \"-47.0653\"\n            }\n        },\n        \"phone\": \"1-463-123-4447\",\n        \"website\": \"ramiro.info\",\n        \"company\": {\n            \"name\": \"Romaguera-Jacobson\",\n            \"catchPhrase\": \"Face to face bifurcated interface\",\n            \"bs\": \"e-enable strategic applications\"\n        }\n    },\n    {\n        \"id\": 4,\n        \"name\": \"Patricia Lebsack\",\n        \"username\": \"Karianne\",\n        \"email\": \"Julianne.OConner@kory.org\",\n        \"address\": {\n            \"street\": \"Hoeger Mall\",\n            \"suite\": \"Apt. 692\",\n            \"city\": \"South Elvis\",\n            \"zipcode\": \"53919-4257\",\n            \"geo\": {\n                \"lat\": \"29.4572\",\n                \"lng\": \"-164.2990\"\n            }\n        },\n        \"phone\": \"493-170-9623 x156\",\n        \"website\": \"kale.biz\",\n        \"company\": {\n            \"name\": \"Robel-Corkery\",\n            \"catchPhrase\": \"Multi-tiered zero tolerance productivity\",\n            \"bs\": \"transition cutting-edge web services\"\n        }\n    },\n    {\n        \"id\": 5,\n        \"name\": \"Chelsey Dietrich\",\n        \"username\": \"Kamren\",\n        \"email\": \"Lucio_Hettinger@annie.ca\",\n        \"address\": {\n            \"street\": \"Skiles Walks\",\n            \"suite\": \"Suite 351\",\n            \"city\": \"Roscoeview\",\n            \"zipcode\": \"33263\",\n            \"geo\": {\n                \"lat\": \"-31.8129\",\n                \"lng\": \"62.5342\"\n            }\n        },\n        \"phone\": \"(254)954-1289\",\n        \"website\": \"demarco.info\",\n        \"company\": {\n            \"name\": \"Keebler LLC\",\n            \"catchPhrase\": \"User-centric fault-tolerant solution\",\n            \"bs\": \"revolutionize end-to-end systems\"\n        }\n    },\n    {\n        \"id\": 6,\n        \"name\": \"Mrs. Dennis Schulist\",\n        \"username\": \"Leopoldo_Corkery\",\n        \"email\": \"Karley_Dach@jasper.info\",\n        \"address\": {\n            \"street\": \"Norberto Crossing\",\n            \"suite\": \"Apt. 950\",\n            \"city\": \"South Christy\",\n            \"zipcode\": \"23505-1337\",\n            \"geo\": {\n                \"lat\": \"-71.4197\",\n                \"lng\": \"71.7478\"\n            }\n        },\n        \"phone\": \"1-477-935-8478 x6430\",\n        \"website\": \"ola.org\",\n        \"company\": {\n            \"name\": \"Considine-Lockman\",\n            \"catchPhrase\": \"Synchronised bottom-line interface\",\n            \"bs\": \"e-enable innovative applications\"\n        }\n    },\n    {\n        \"id\": 7,\n        \"name\": \"Kurtis Weissnat\",\n        \"username\": \"Elwyn.Skiles\",\n        \"email\": \"Telly.Hoeger@billy.biz\",\n        \"address\": {\n            \"street\": \"Rex Trail\",\n            \"suite\": \"Suite 280\",\n            \"city\": \"Howemouth\",\n            \"zipcode\": \"58804-1099\",\n            \"geo\": {\n                \"lat\": \"24.8918\",\n                \"lng\": \"21.8984\"\n            }\n        },\n        \"phone\": \"210.067.6132\",\n        \"website\": \"elvis.io\",\n        \"company\": {\n            \"name\": \"Johns Group\",\n            \"catchPhrase\": \"Configurable multimedia task-force\",\n            \"bs\": \"generate enterprise e-tailers\"\n        }\n    },\n    {\n        \"id\": 8,\n        \"name\": \"Nicholas Runolfsdottir V\",\n        \"username\": \"Maxime_Nienow\",\n        \"email\": \"Sherwood@rosamond.me\",\n        \"address\": {\n            \"street\": \"Ellsworth Summit\",\n            \"suite\": \"Suite 729\",\n            \"city\": \"Aliyaview\",\n            \"zipcode\": \"45169\",\n            \"geo\": {\n                \"lat\": \"-14.3990\",\n                \"lng\": \"-120.7677\"\n            }\n        },\n        \"phone\": \"586.493.6943 x140\",\n        \"website\": \"jacynthe.com\",\n        \"company\": {\n            \"name\": \"Abernathy Group\",\n            \"catchPhrase\": \"Implemented secondary concept\",\n            \"bs\": \"e-enable extensible e-tailers\"\n        }\n    },\n    {\n        \"id\": 9,\n        \"name\": \"Glenna Reichert\",\n        \"username\": \"Delphine\",\n        \"email\": \"Chaim_McDermott@dana.io\",\n        \"address\": {\n            \"street\": \"Dayna Park\",\n            \"suite\": \"Suite 449\",\n            \"city\": \"Bartholomebury\",\n            \"zipcode\": \"76495-3109\",\n            \"geo\": {\n                \"lat\": \"24.6463\",\n                \"lng\": \"-168.8889\"\n            }\n        },\n        \"phone\": \"(775)976-6794 x41206\",\n        \"website\": \"conrad.com\",\n        \"company\": {\n            \"name\": \"Yost and Sons\",\n            \"catchPhrase\": \"Switchable contextually-based project\",\n            \"bs\": \"aggregate real-time technologies\"\n        }\n    },\n    {\n        \"id\": 10,\n        \"name\": \"Clementina DuBuque\",\n        \"username\": \"Moriah.Stanton\",\n        \"email\": \"Rey.Padberg@karina.biz\",\n        \"address\": {\n            \"street\": \"Kattie Turnpike\",\n            \"suite\": \"Suite 198\",\n            \"city\": \"Lebsackbury\",\n            \"zipcode\": \"31428-2261\",\n            \"geo\": {\n                \"lat\": \"-38.2386\",\n                \"lng\": \"57.2232\"\n            }\n        },\n        \"phone\": \"024-648-3804\",\n        \"website\": \"ambrose.net\",\n        \"company\": {\n            \"name\": \"Hoeger LLC\",\n            \"catchPhrase\": \"Centralized empowering task-force\",\n            \"bs\": \"target end-to-end models\"\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "print a user’s name, email, and address",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const userResponse = pm.response.json();",
+									"// Extract relevant information",
+									"const userName = userResponse.name;",
+									"const userEmail = userResponse.email;",
+									"const userAddress = userResponse.address;",
+									"",
+									"// Print to console",
+									"console.log(`User Name: ${userName}`);",
+									"console.log(`User Email: ${userEmail}`);",
+									"console.log(`User Address: ${userAddress.street}, ${userAddress.suite}, ${userAddress.city}, ${userAddress.zipcode}`);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{typecode_baseURL}}/users/1",
+							"host": [
+								"{{typecode_baseURL}}"
+							],
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{typecode_baseURL}}/users/1",
+									"host": [
+										"{{typecode_baseURL}}"
+									],
+									"path": [
+										"users",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 26 Feb 2024 02:53:52 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Report-To",
+									"value": "{\"group\":\"heroku-nel\",\"max_age\":3600,\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?ts=1705201603&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=aO%2FZtWzaZy9StJ3j8YNm32GhVtotkKVF8mfEYUPO28M%3D\"}]}"
+								},
+								{
+									"key": "Reporting-Endpoints",
+									"value": "heroku-nel=https://nel.heroku.com/reports?ts=1705201603&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=aO%2FZtWzaZy9StJ3j8YNm32GhVtotkKVF8mfEYUPO28M%3D"
+								},
+								{
+									"key": "Nel",
+									"value": "{\"report_to\":\"heroku-nel\",\"max_age\":3600,\"success_fraction\":0.005,\"failure_fraction\":0.05,\"response_headers\":[\"Via\"]}"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Ratelimit-Limit",
+									"value": "1000"
+								},
+								{
+									"key": "X-Ratelimit-Remaining",
+									"value": "999"
+								},
+								{
+									"key": "X-Ratelimit-Reset",
+									"value": "1705201606"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin, Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=43200"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"1fd-+2Y3G3w049iSZtw5t1mzSnunngE\""
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "HIT"
+								},
+								{
+									"key": "Age",
+									"value": "6149"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "85b4e6751bb93b95-IAD"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"Leanne Graham\",\n    \"username\": \"Bret\",\n    \"email\": \"Sincere@april.biz\",\n    \"address\": {\n        \"street\": \"Kulas Light\",\n        \"suite\": \"Apt. 556\",\n        \"city\": \"Gwenborough\",\n        \"zipcode\": \"92998-3874\",\n        \"geo\": {\n            \"lat\": \"-37.3159\",\n            \"lng\": \"81.1496\"\n        }\n    },\n    \"phone\": \"1-770-736-8031 x56442\",\n    \"website\": \"hildegard.org\",\n    \"company\": {\n        \"name\": \"Romaguera-Crona\",\n        \"catchPhrase\": \"Multi-layered client-server neural-net\",\n        \"bs\": \"harness real-time e-markets\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "get a user’s associated posts",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Check if the request was successful (status code 200)",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"//check if the response body is a valid JSON",
+									"pm.test(\"Response body is a JSON\", function () {",
+									"    pm.response.to.be.json; ",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{typecode_baseURL}}/user/1/posts",
+							"host": [
+								"{{typecode_baseURL}}"
+							],
+							"path": [
+								"user",
+								"1",
+								"posts"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{typecode_baseURL}}/user/1/posts",
+									"host": [
+										"{{typecode_baseURL}}"
+									],
+									"path": [
+										"user",
+										"1",
+										"posts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 26 Feb 2024 02:57:12 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Report-To",
+									"value": "{\"group\":\"heroku-nel\",\"max_age\":3600,\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?ts=1708916232&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=V0vqcE0i7bKjNtAsDUH7kDodOfULk9WPjgtz7E%2BA%2B%2BY%3D\"}]}"
+								},
+								{
+									"key": "Reporting-Endpoints",
+									"value": "heroku-nel=https://nel.heroku.com/reports?ts=1708916232&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=V0vqcE0i7bKjNtAsDUH7kDodOfULk9WPjgtz7E%2BA%2B%2BY%3D"
+								},
+								{
+									"key": "Nel",
+									"value": "{\"report_to\":\"heroku-nel\",\"max_age\":3600,\"success_fraction\":0.005,\"failure_fraction\":0.05,\"response_headers\":[\"Via\"]}"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Ratelimit-Limit",
+									"value": "1000"
+								},
+								{
+									"key": "X-Ratelimit-Remaining",
+									"value": "998"
+								},
+								{
+									"key": "X-Ratelimit-Reset",
+									"value": "1708916278"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin, Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=43200"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"aa6-j2NSH739l9uq40OywFMn7Y0C/iY\""
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "MISS"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "85b4eb538cf12072-IAD"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"userId\": 1,\n        \"id\": 1,\n        \"title\": \"sunt aut facere repellat provident occaecati excepturi optio reprehenderit\",\n        \"body\": \"quia et suscipit\\nsuscipit recusandae consequuntur expedita et cum\\nreprehenderit molestiae ut ut quas totam\\nnostrum rerum est autem sunt rem eveniet architecto\"\n    },\n    {\n        \"userId\": 1,\n        \"id\": 2,\n        \"title\": \"qui est esse\",\n        \"body\": \"est rerum tempore vitae\\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\\nqui aperiam non debitis possimus qui neque nisi nulla\"\n    },\n    {\n        \"userId\": 1,\n        \"id\": 3,\n        \"title\": \"ea molestias quasi exercitationem repellat qui ipsa sit aut\",\n        \"body\": \"et iusto sed quo iure\\nvoluptatem occaecati omnis eligendi aut ad\\nvoluptatem doloribus vel accusantium quis pariatur\\nmolestiae porro eius odio et labore et velit aut\"\n    },\n    {\n        \"userId\": 1,\n        \"id\": 4,\n        \"title\": \"eum et est occaecati\",\n        \"body\": \"ullam et saepe reiciendis voluptatem adipisci\\nsit amet autem assumenda provident rerum culpa\\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\\nquis sunt voluptatem rerum illo velit\"\n    },\n    {\n        \"userId\": 1,\n        \"id\": 5,\n        \"title\": \"nesciunt quas odio\",\n        \"body\": \"repudiandae veniam quaerat sunt sed\\nalias aut fugiat sit autem sed est\\nvoluptatem omnis possimus esse voluptatibus quis\\nest aut tenetur dolor neque\"\n    },\n    {\n        \"userId\": 1,\n        \"id\": 6,\n        \"title\": \"dolorem eum magni eos aperiam quia\",\n        \"body\": \"ut aspernatur corporis harum nihil quis provident sequi\\nmollitia nobis aliquid molestiae\\nperspiciatis et ea nemo ab reprehenderit accusantium quas\\nvoluptate dolores velit et doloremque molestiae\"\n    },\n    {\n        \"userId\": 1,\n        \"id\": 7,\n        \"title\": \"magnam facilis autem\",\n        \"body\": \"dolore placeat quibusdam ea quo vitae\\nmagni quis enim qui quis quo nemo aut saepe\\nquidem repellat excepturi ut quia\\nsunt ut sequi eos ea sed quas\"\n    },\n    {\n        \"userId\": 1,\n        \"id\": 8,\n        \"title\": \"dolorem dolore est ipsam\",\n        \"body\": \"dignissimos aperiam dolorem qui eum\\nfacilis quibusdam animi sint suscipit qui sint possimus cum\\nquaerat magni maiores excepturi\\nipsam ut commodi dolor voluptatum modi aut vitae\"\n    },\n    {\n        \"userId\": 1,\n        \"id\": 9,\n        \"title\": \"nesciunt iure omnis dolorem tempora et accusantium\",\n        \"body\": \"consectetur animi nesciunt iure dolore\\nenim quia ad\\nveniam autem ut quam aut nobis\\net est aut quod aut provident voluptas autem voluptas\"\n    },\n    {\n        \"userId\": 1,\n        \"id\": 10,\n        \"title\": \"optio molestias id quia eum\",\n        \"body\": \"quo et expedita modi cum officia vel magni\\ndoloribus qui repudiandae\\nvero nisi sit\\nquos veniam quod sed accusamus veritatis error\"\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Question 7",
+			"item": [
+				{
+					"name": "Create a auth Token.",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"",
+									"var get = JSON.parse(responseBody);",
+									"pm.collectionVariables.set(\"Token\", get.token);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\" : \"admin\",\n    \"password\" : \"password123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://restful-booker.herokuapp.com/auth/",
+							"protocol": "https",
+							"host": [
+								"restful-booker",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"auth",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\" : \"admin\",\n    \"password\" : \"password123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://restful-booker.herokuapp.com/auth/",
+									"protocol": "https",
+									"host": [
+										"restful-booker",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"auth",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Report-To",
+									"value": "{\"group\":\"heroku-nel\",\"max_age\":3600,\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?ts=1708917643&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=CWIh5O5bQZ2vX90f2j5CskA0JMddVD5Gd4Hz82jOhAU%3D\"}]}"
+								},
+								{
+									"key": "Reporting-Endpoints",
+									"value": "heroku-nel=https://nel.heroku.com/reports?ts=1708917643&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=CWIh5O5bQZ2vX90f2j5CskA0JMddVD5Gd4Hz82jOhAU%3D"
+								},
+								{
+									"key": "Nel",
+									"value": "{\"report_to\":\"heroku-nel\",\"max_age\":3600,\"success_fraction\":0.005,\"failure_fraction\":0.05,\"response_headers\":[\"Via\"]}"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "27"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"1b-+76fw77augyX7nCOlg+84NWvMoc\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 26 Feb 2024 03:20:43 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"87abc6846ffc23a\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get all bookingIDs",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Check if the request was successful (status code 200)",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"//check if the response body is a valid JSON",
+									"pm.test(\"Response body is a JSON\", function () {",
+									"    pm.response.to.be.json; ",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restful-booker.herokuapp.com/booking",
+							"protocol": "https",
+							"host": [
+								"restful-booker",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"booking"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://restful-booker.herokuapp.com/booking",
+									"protocol": "https",
+									"host": [
+										"restful-booker",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"booking"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Report-To",
+									"value": "{\"group\":\"heroku-nel\",\"max_age\":3600,\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?ts=1708916638&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=pxvpShUtv1v%2Brb3wUhk6wozbX1JUYz9ybTnZ345%2FxOo%3D\"}]}"
+								},
+								{
+									"key": "Reporting-Endpoints",
+									"value": "heroku-nel=https://nel.heroku.com/reports?ts=1708916638&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=pxvpShUtv1v%2Brb3wUhk6wozbX1JUYz9ybTnZ345%2FxOo%3D"
+								},
+								{
+									"key": "Nel",
+									"value": "{\"report_to\":\"heroku-nel\",\"max_age\":3600,\"success_fraction\":0.005,\"failure_fraction\":0.05,\"response_headers\":[\"Via\"]}"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "10956"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"2acc-kJItoOq//8/9eVjj/1bFVClcy+s\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 26 Feb 2024 03:03:58 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"bookingid\": 770\n    },\n    {\n        \"bookingid\": 792\n    },\n    {\n        \"bookingid\": 565\n    },\n    {\n        \"bookingid\": 880\n    },\n    {\n        \"bookingid\": 648\n    },\n    {\n        \"bookingid\": 2\n    },\n    {\n        \"bookingid\": 802\n    },\n    {\n        \"bookingid\": 130\n    },\n    {\n        \"bookingid\": 825\n    },\n    {\n        \"bookingid\": 231\n    },\n    {\n        \"bookingid\": 4\n    },\n    {\n        \"bookingid\": 125\n    },\n    {\n        \"bookingid\": 517\n    },\n    {\n        \"bookingid\": 147\n    },\n    {\n        \"bookingid\": 404\n    },\n    {\n        \"bookingid\": 162\n    },\n    {\n        \"bookingid\": 598\n    },\n    {\n        \"bookingid\": 857\n    },\n    {\n        \"bookingid\": 528\n    },\n    {\n        \"bookingid\": 374\n    },\n    {\n        \"bookingid\": 23\n    },\n    {\n        \"bookingid\": 698\n    },\n    {\n        \"bookingid\": 268\n    },\n    {\n        \"bookingid\": 205\n    },\n    {\n        \"bookingid\": 247\n    },\n    {\n        \"bookingid\": 100\n    },\n    {\n        \"bookingid\": 862\n    },\n    {\n        \"bookingid\": 794\n    },\n    {\n        \"bookingid\": 402\n    },\n    {\n        \"bookingid\": 420\n    },\n    {\n        \"bookingid\": 442\n    },\n    {\n        \"bookingid\": 225\n    },\n    {\n        \"bookingid\": 871\n    },\n    {\n        \"bookingid\": 759\n    },\n    {\n        \"bookingid\": 339\n    },\n    {\n        \"bookingid\": 131\n    },\n    {\n        \"bookingid\": 488\n    },\n    {\n        \"bookingid\": 145\n    },\n    {\n        \"bookingid\": 630\n    },\n    {\n        \"bookingid\": 38\n    },\n    {\n        \"bookingid\": 850\n    },\n    {\n        \"bookingid\": 505\n    },\n    {\n        \"bookingid\": 833\n    },\n    {\n        \"bookingid\": 472\n    },\n    {\n        \"bookingid\": 518\n    },\n    {\n        \"bookingid\": 157\n    },\n    {\n        \"bookingid\": 808\n    },\n    {\n        \"bookingid\": 134\n    },\n    {\n        \"bookingid\": 128\n    },\n    {\n        \"bookingid\": 498\n    },\n    {\n        \"bookingid\": 786\n    },\n    {\n        \"bookingid\": 738\n    },\n    {\n        \"bookingid\": 426\n    },\n    {\n        \"bookingid\": 310\n    },\n    {\n        \"bookingid\": 60\n    },\n    {\n        \"bookingid\": 716\n    },\n    {\n        \"bookingid\": 382\n    },\n    {\n        \"bookingid\": 772\n    },\n    {\n        \"bookingid\": 366\n    },\n    {\n        \"bookingid\": 521\n    },\n    {\n        \"bookingid\": 806\n    },\n    {\n        \"bookingid\": 419\n    },\n    {\n        \"bookingid\": 45\n    },\n    {\n        \"bookingid\": 605\n    },\n    {\n        \"bookingid\": 182\n    },\n    {\n        \"bookingid\": 126\n    },\n    {\n        \"bookingid\": 563\n    },\n    {\n        \"bookingid\": 865\n    },\n    {\n        \"bookingid\": 718\n    },\n    {\n        \"bookingid\": 713\n    },\n    {\n        \"bookingid\": 26\n    },\n    {\n        \"bookingid\": 892\n    },\n    {\n        \"bookingid\": 377\n    },\n    {\n        \"bookingid\": 783\n    },\n    {\n        \"bookingid\": 352\n    },\n    {\n        \"bookingid\": 282\n    },\n    {\n        \"bookingid\": 275\n    },\n    {\n        \"bookingid\": 20\n    },\n    {\n        \"bookingid\": 690\n    },\n    {\n        \"bookingid\": 460\n    },\n    {\n        \"bookingid\": 845\n    },\n    {\n        \"bookingid\": 153\n    },\n    {\n        \"bookingid\": 156\n    },\n    {\n        \"bookingid\": 727\n    },\n    {\n        \"bookingid\": 525\n    },\n    {\n        \"bookingid\": 487\n    },\n    {\n        \"bookingid\": 809\n    },\n    {\n        \"bookingid\": 552\n    },\n    {\n        \"bookingid\": 588\n    },\n    {\n        \"bookingid\": 816\n    },\n    {\n        \"bookingid\": 837\n    },\n    {\n        \"bookingid\": 688\n    },\n    {\n        \"bookingid\": 629\n    },\n    {\n        \"bookingid\": 85\n    },\n    {\n        \"bookingid\": 583\n    },\n    {\n        \"bookingid\": 150\n    },\n    {\n        \"bookingid\": 696\n    },\n    {\n        \"bookingid\": 708\n    },\n    {\n        \"bookingid\": 585\n    },\n    {\n        \"bookingid\": 543\n    },\n    {\n        \"bookingid\": 305\n    },\n    {\n        \"bookingid\": 623\n    },\n    {\n        \"bookingid\": 319\n    },\n    {\n        \"bookingid\": 659\n    },\n    {\n        \"bookingid\": 527\n    },\n    {\n        \"bookingid\": 379\n    },\n    {\n        \"bookingid\": 79\n    },\n    {\n        \"bookingid\": 684\n    },\n    {\n        \"bookingid\": 807\n    },\n    {\n        \"bookingid\": 376\n    },\n    {\n        \"bookingid\": 103\n    },\n    {\n        \"bookingid\": 741\n    },\n    {\n        \"bookingid\": 574\n    },\n    {\n        \"bookingid\": 168\n    },\n    {\n        \"bookingid\": 269\n    },\n    {\n        \"bookingid\": 286\n    },\n    {\n        \"bookingid\": 400\n    },\n    {\n        \"bookingid\": 686\n    },\n    {\n        \"bookingid\": 670\n    },\n    {\n        \"bookingid\": 398\n    },\n    {\n        \"bookingid\": 798\n    },\n    {\n        \"bookingid\": 108\n    },\n    {\n        \"bookingid\": 822\n    },\n    {\n        \"bookingid\": 749\n    },\n    {\n        \"bookingid\": 885\n    },\n    {\n        \"bookingid\": 322\n    },\n    {\n        \"bookingid\": 257\n    },\n    {\n        \"bookingid\": 34\n    },\n    {\n        \"bookingid\": 633\n    },\n    {\n        \"bookingid\": 835\n    },\n    {\n        \"bookingid\": 682\n    },\n    {\n        \"bookingid\": 576\n    },\n    {\n        \"bookingid\": 300\n    },\n    {\n        \"bookingid\": 11\n    },\n    {\n        \"bookingid\": 642\n    },\n    {\n        \"bookingid\": 296\n    },\n    {\n        \"bookingid\": 8\n    },\n    {\n        \"bookingid\": 711\n    },\n    {\n        \"bookingid\": 276\n    },\n    {\n        \"bookingid\": 676\n    },\n    {\n        \"bookingid\": 469\n    },\n    {\n        \"bookingid\": 84\n    },\n    {\n        \"bookingid\": 63\n    },\n    {\n        \"bookingid\": 775\n    },\n    {\n        \"bookingid\": 851\n    },\n    {\n        \"bookingid\": 454\n    },\n    {\n        \"bookingid\": 58\n    },\n    {\n        \"bookingid\": 435\n    },\n    {\n        \"bookingid\": 534\n    },\n    {\n        \"bookingid\": 888\n    },\n    {\n        \"bookingid\": 378\n    },\n    {\n        \"bookingid\": 345\n    },\n    {\n        \"bookingid\": 697\n    },\n    {\n        \"bookingid\": 75\n    },\n    {\n        \"bookingid\": 514\n    },\n    {\n        \"bookingid\": 331\n    },\n    {\n        \"bookingid\": 384\n    },\n    {\n        \"bookingid\": 188\n    },\n    {\n        \"bookingid\": 306\n    },\n    {\n        \"bookingid\": 482\n    },\n    {\n        \"bookingid\": 170\n    },\n    {\n        \"bookingid\": 643\n    },\n    {\n        \"bookingid\": 140\n    },\n    {\n        \"bookingid\": 254\n    },\n    {\n        \"bookingid\": 334\n    },\n    {\n        \"bookingid\": 754\n    },\n    {\n        \"bookingid\": 54\n    },\n    {\n        \"bookingid\": 445\n    },\n    {\n        \"bookingid\": 765\n    },\n    {\n        \"bookingid\": 876\n    },\n    {\n        \"bookingid\": 490\n    },\n    {\n        \"bookingid\": 93\n    },\n    {\n        \"bookingid\": 763\n    },\n    {\n        \"bookingid\": 861\n    },\n    {\n        \"bookingid\": 611\n    },\n    {\n        \"bookingid\": 660\n    },\n    {\n        \"bookingid\": 370\n    },\n    {\n        \"bookingid\": 341\n    },\n    {\n        \"bookingid\": 163\n    },\n    {\n        \"bookingid\": 111\n    },\n    {\n        \"bookingid\": 261\n    },\n    {\n        \"bookingid\": 492\n    },\n    {\n        \"bookingid\": 149\n    },\n    {\n        \"bookingid\": 661\n    },\n    {\n        \"bookingid\": 273\n    },\n    {\n        \"bookingid\": 795\n    },\n    {\n        \"bookingid\": 259\n    },\n    {\n        \"bookingid\": 617\n    },\n    {\n        \"bookingid\": 33\n    },\n    {\n        \"bookingid\": 522\n    },\n    {\n        \"bookingid\": 784\n    },\n    {\n        \"bookingid\": 202\n    },\n    {\n        \"bookingid\": 91\n    },\n    {\n        \"bookingid\": 675\n    },\n    {\n        \"bookingid\": 355\n    },\n    {\n        \"bookingid\": 823\n    },\n    {\n        \"bookingid\": 573\n    },\n    {\n        \"bookingid\": 390\n    },\n    {\n        \"bookingid\": 622\n    },\n    {\n        \"bookingid\": 224\n    },\n    {\n        \"bookingid\": 540\n    },\n    {\n        \"bookingid\": 451\n    },\n    {\n        \"bookingid\": 220\n    },\n    {\n        \"bookingid\": 397\n    },\n    {\n        \"bookingid\": 298\n    },\n    {\n        \"bookingid\": 452\n    },\n    {\n        \"bookingid\": 555\n    },\n    {\n        \"bookingid\": 405\n    },\n    {\n        \"bookingid\": 90\n    },\n    {\n        \"bookingid\": 491\n    },\n    {\n        \"bookingid\": 502\n    },\n    {\n        \"bookingid\": 35\n    },\n    {\n        \"bookingid\": 873\n    },\n    {\n        \"bookingid\": 83\n    },\n    {\n        \"bookingid\": 717\n    },\n    {\n        \"bookingid\": 797\n    },\n    {\n        \"bookingid\": 568\n    },\n    {\n        \"bookingid\": 72\n    },\n    {\n        \"bookingid\": 394\n    },\n    {\n        \"bookingid\": 441\n    },\n    {\n        \"bookingid\": 666\n    },\n    {\n        \"bookingid\": 29\n    },\n    {\n        \"bookingid\": 57\n    },\n    {\n        \"bookingid\": 635\n    },\n    {\n        \"bookingid\": 596\n    },\n    {\n        \"bookingid\": 342\n    },\n    {\n        \"bookingid\": 548\n    },\n    {\n        \"bookingid\": 66\n    },\n    {\n        \"bookingid\": 764\n    },\n    {\n        \"bookingid\": 533\n    },\n    {\n        \"bookingid\": 440\n    },\n    {\n        \"bookingid\": 819\n    },\n    {\n        \"bookingid\": 267\n    },\n    {\n        \"bookingid\": 194\n    },\n    {\n        \"bookingid\": 457\n    },\n    {\n        \"bookingid\": 120\n    },\n    {\n        \"bookingid\": 364\n    },\n    {\n        \"bookingid\": 650\n    },\n    {\n        \"bookingid\": 720\n    },\n    {\n        \"bookingid\": 790\n    },\n    {\n        \"bookingid\": 564\n    },\n    {\n        \"bookingid\": 453\n    },\n    {\n        \"bookingid\": 714\n    },\n    {\n        \"bookingid\": 338\n    },\n    {\n        \"bookingid\": 662\n    },\n    {\n        \"bookingid\": 601\n    },\n    {\n        \"bookingid\": 391\n    },\n    {\n        \"bookingid\": 510\n    },\n    {\n        \"bookingid\": 526\n    },\n    {\n        \"bookingid\": 337\n    },\n    {\n        \"bookingid\": 839\n    },\n    {\n        \"bookingid\": 707\n    },\n    {\n        \"bookingid\": 32\n    },\n    {\n        \"bookingid\": 230\n    },\n    {\n        \"bookingid\": 53\n    },\n    {\n        \"bookingid\": 270\n    },\n    {\n        \"bookingid\": 531\n    },\n    {\n        \"bookingid\": 597\n    },\n    {\n        \"bookingid\": 709\n    },\n    {\n        \"bookingid\": 740\n    },\n    {\n        \"bookingid\": 731\n    },\n    {\n        \"bookingid\": 372\n    },\n    {\n        \"bookingid\": 143\n    },\n    {\n        \"bookingid\": 577\n    },\n    {\n        \"bookingid\": 106\n    },\n    {\n        \"bookingid\": 777\n    },\n    {\n        \"bookingid\": 206\n    },\n    {\n        \"bookingid\": 703\n    },\n    {\n        \"bookingid\": 481\n    },\n    {\n        \"bookingid\": 64\n    },\n    {\n        \"bookingid\": 812\n    },\n    {\n        \"bookingid\": 625\n    },\n    {\n        \"bookingid\": 246\n    },\n    {\n        \"bookingid\": 512\n    },\n    {\n        \"bookingid\": 817\n    },\n    {\n        \"bookingid\": 483\n    },\n    {\n        \"bookingid\": 383\n    },\n    {\n        \"bookingid\": 532\n    },\n    {\n        \"bookingid\": 803\n    },\n    {\n        \"bookingid\": 7\n    },\n    {\n        \"bookingid\": 891\n    },\n    {\n        \"bookingid\": 464\n    },\n    {\n        \"bookingid\": 199\n    },\n    {\n        \"bookingid\": 346\n    },\n    {\n        \"bookingid\": 287\n    },\n    {\n        \"bookingid\": 13\n    },\n    {\n        \"bookingid\": 49\n    },\n    {\n        \"bookingid\": 722\n    },\n    {\n        \"bookingid\": 195\n    },\n    {\n        \"bookingid\": 192\n    },\n    {\n        \"bookingid\": 769\n    },\n    {\n        \"bookingid\": 365\n    },\n    {\n        \"bookingid\": 351\n    },\n    {\n        \"bookingid\": 316\n    },\n    {\n        \"bookingid\": 389\n    },\n    {\n        \"bookingid\": 458\n    },\n    {\n        \"bookingid\": 396\n    },\n    {\n        \"bookingid\": 748\n    },\n    {\n        \"bookingid\": 592\n    },\n    {\n        \"bookingid\": 595\n    },\n    {\n        \"bookingid\": 655\n    },\n    {\n        \"bookingid\": 781\n    },\n    {\n        \"bookingid\": 761\n    },\n    {\n        \"bookingid\": 5\n    },\n    {\n        \"bookingid\": 634\n    },\n    {\n        \"bookingid\": 234\n    },\n    {\n        \"bookingid\": 180\n    },\n    {\n        \"bookingid\": 810\n    },\n    {\n        \"bookingid\": 677\n    },\n    {\n        \"bookingid\": 116\n    },\n    {\n        \"bookingid\": 237\n    },\n    {\n        \"bookingid\": 869\n    },\n    {\n        \"bookingid\": 318\n    },\n    {\n        \"bookingid\": 751\n    },\n    {\n        \"bookingid\": 503\n    },\n    {\n        \"bookingid\": 612\n    },\n    {\n        \"bookingid\": 431\n    },\n    {\n        \"bookingid\": 105\n    },\n    {\n        \"bookingid\": 463\n    },\n    {\n        \"bookingid\": 603\n    },\n    {\n        \"bookingid\": 258\n    },\n    {\n        \"bookingid\": 746\n    },\n    {\n        \"bookingid\": 181\n    },\n    {\n        \"bookingid\": 253\n    },\n    {\n        \"bookingid\": 465\n    },\n    {\n        \"bookingid\": 470\n    },\n    {\n        \"bookingid\": 25\n    },\n    {\n        \"bookingid\": 115\n    },\n    {\n        \"bookingid\": 547\n    },\n    {\n        \"bookingid\": 209\n    },\n    {\n        \"bookingid\": 801\n    },\n    {\n        \"bookingid\": 14\n    },\n    {\n        \"bookingid\": 313\n    },\n    {\n        \"bookingid\": 681\n    },\n    {\n        \"bookingid\": 606\n    },\n    {\n        \"bookingid\": 165\n    },\n    {\n        \"bookingid\": 340\n    },\n    {\n        \"bookingid\": 683\n    },\n    {\n        \"bookingid\": 37\n    },\n    {\n        \"bookingid\": 249\n    },\n    {\n        \"bookingid\": 590\n    },\n    {\n        \"bookingid\": 10\n    },\n    {\n        \"bookingid\": 734\n    },\n    {\n        \"bookingid\": 553\n    },\n    {\n        \"bookingid\": 236\n    },\n    {\n        \"bookingid\": 815\n    },\n    {\n        \"bookingid\": 294\n    },\n    {\n        \"bookingid\": 539\n    },\n    {\n        \"bookingid\": 309\n    },\n    {\n        \"bookingid\": 691\n    },\n    {\n        \"bookingid\": 67\n    },\n    {\n        \"bookingid\": 436\n    },\n    {\n        \"bookingid\": 859\n    },\n    {\n        \"bookingid\": 97\n    },\n    {\n        \"bookingid\": 668\n    },\n    {\n        \"bookingid\": 624\n    },\n    {\n        \"bookingid\": 504\n    },\n    {\n        \"bookingid\": 569\n    },\n    {\n        \"bookingid\": 189\n    },\n    {\n        \"bookingid\": 427\n    },\n    {\n        \"bookingid\": 73\n    },\n    {\n        \"bookingid\": 874\n    },\n    {\n        \"bookingid\": 537\n    },\n    {\n        \"bookingid\": 632\n    },\n    {\n        \"bookingid\": 201\n    },\n    {\n        \"bookingid\": 332\n    },\n    {\n        \"bookingid\": 169\n    },\n    {\n        \"bookingid\": 827\n    },\n    {\n        \"bookingid\": 304\n    },\n    {\n        \"bookingid\": 479\n    },\n    {\n        \"bookingid\": 554\n    },\n    {\n        \"bookingid\": 578\n    },\n    {\n        \"bookingid\": 446\n    },\n    {\n        \"bookingid\": 114\n    },\n    {\n        \"bookingid\": 447\n    },\n    {\n        \"bookingid\": 581\n    },\n    {\n        \"bookingid\": 327\n    },\n    {\n        \"bookingid\": 22\n    },\n    {\n        \"bookingid\": 478\n    },\n    {\n        \"bookingid\": 418\n    },\n    {\n        \"bookingid\": 618\n    },\n    {\n        \"bookingid\": 649\n    },\n    {\n        \"bookingid\": 144\n    },\n    {\n        \"bookingid\": 841\n    },\n    {\n        \"bookingid\": 843\n    },\n    {\n        \"bookingid\": 476\n    },\n    {\n        \"bookingid\": 96\n    },\n    {\n        \"bookingid\": 228\n    },\n    {\n        \"bookingid\": 538\n    },\n    {\n        \"bookingid\": 821\n    },\n    {\n        \"bookingid\": 222\n    },\n    {\n        \"bookingid\": 893\n    },\n    {\n        \"bookingid\": 16\n    },\n    {\n        \"bookingid\": 752\n    },\n    {\n        \"bookingid\": 251\n    },\n    {\n        \"bookingid\": 887\n    },\n    {\n        \"bookingid\": 24\n    },\n    {\n        \"bookingid\": 198\n    },\n    {\n        \"bookingid\": 653\n    },\n    {\n        \"bookingid\": 494\n    },\n    {\n        \"bookingid\": 895\n    },\n    {\n        \"bookingid\": 240\n    },\n    {\n        \"bookingid\": 208\n    },\n    {\n        \"bookingid\": 410\n    },\n    {\n        \"bookingid\": 493\n    },\n    {\n        \"bookingid\": 175\n    },\n    {\n        \"bookingid\": 728\n    },\n    {\n        \"bookingid\": 544\n    },\n    {\n        \"bookingid\": 6\n    },\n    {\n        \"bookingid\": 882\n    },\n    {\n        \"bookingid\": 359\n    },\n    {\n        \"bookingid\": 461\n    },\n    {\n        \"bookingid\": 117\n    },\n    {\n        \"bookingid\": 216\n    },\n    {\n        \"bookingid\": 619\n    },\n    {\n        \"bookingid\": 297\n    },\n    {\n        \"bookingid\": 496\n    },\n    {\n        \"bookingid\": 439\n    },\n    {\n        \"bookingid\": 894\n    },\n    {\n        \"bookingid\": 421\n    },\n    {\n        \"bookingid\": 36\n    },\n    {\n        \"bookingid\": 139\n    },\n    {\n        \"bookingid\": 245\n    },\n    {\n        \"bookingid\": 654\n    },\n    {\n        \"bookingid\": 587\n    },\n    {\n        \"bookingid\": 549\n    },\n    {\n        \"bookingid\": 753\n    },\n    {\n        \"bookingid\": 855\n    },\n    {\n        \"bookingid\": 89\n    },\n    {\n        \"bookingid\": 122\n    },\n    {\n        \"bookingid\": 745\n    },\n    {\n        \"bookingid\": 726\n    },\n    {\n        \"bookingid\": 289\n    },\n    {\n        \"bookingid\": 301\n    },\n    {\n        \"bookingid\": 448\n    },\n    {\n        \"bookingid\": 252\n    },\n    {\n        \"bookingid\": 102\n    },\n    {\n        \"bookingid\": 737\n    },\n    {\n        \"bookingid\": 669\n    },\n    {\n        \"bookingid\": 87\n    },\n    {\n        \"bookingid\": 484\n    },\n    {\n        \"bookingid\": 499\n    },\n    {\n        \"bookingid\": 213\n    },\n    {\n        \"bookingid\": 177\n    },\n    {\n        \"bookingid\": 77\n    },\n    {\n        \"bookingid\": 243\n    },\n    {\n        \"bookingid\": 193\n    },\n    {\n        \"bookingid\": 736\n    },\n    {\n        \"bookingid\": 429\n    },\n    {\n        \"bookingid\": 409\n    },\n    {\n        \"bookingid\": 279\n    },\n    {\n        \"bookingid\": 123\n    },\n    {\n        \"bookingid\": 41\n    },\n    {\n        \"bookingid\": 176\n    },\n    {\n        \"bookingid\": 411\n    },\n    {\n        \"bookingid\": 207\n    },\n    {\n        \"bookingid\": 506\n    },\n    {\n        \"bookingid\": 414\n    },\n    {\n        \"bookingid\": 860\n    },\n    {\n        \"bookingid\": 773\n    },\n    {\n        \"bookingid\": 280\n    },\n    {\n        \"bookingid\": 302\n    },\n    {\n        \"bookingid\": 513\n    },\n    {\n        \"bookingid\": 591\n    },\n    {\n        \"bookingid\": 221\n    },\n    {\n        \"bookingid\": 260\n    },\n    {\n        \"bookingid\": 562\n    },\n    {\n        \"bookingid\": 432\n    },\n    {\n        \"bookingid\": 834\n    },\n    {\n        \"bookingid\": 137\n    },\n    {\n        \"bookingid\": 584\n    },\n    {\n        \"bookingid\": 567\n    },\n    {\n        \"bookingid\": 636\n    },\n    {\n        \"bookingid\": 360\n    },\n    {\n        \"bookingid\": 242\n    },\n    {\n        \"bookingid\": 519\n    },\n    {\n        \"bookingid\": 780\n    },\n    {\n        \"bookingid\": 386\n    },\n    {\n        \"bookingid\": 95\n    },\n    {\n        \"bookingid\": 44\n    },\n    {\n        \"bookingid\": 226\n    },\n    {\n        \"bookingid\": 356\n    },\n    {\n        \"bookingid\": 124\n    },\n    {\n        \"bookingid\": 602\n    },\n    {\n        \"bookingid\": 166\n    },\n    {\n        \"bookingid\": 9\n    },\n    {\n        \"bookingid\": 561\n    },\n    {\n        \"bookingid\": 646\n    },\n    {\n        \"bookingid\": 235\n    },\n    {\n        \"bookingid\": 18\n    },\n    {\n        \"bookingid\": 158\n    },\n    {\n        \"bookingid\": 262\n    },\n    {\n        \"bookingid\": 292\n    },\n    {\n        \"bookingid\": 471\n    },\n    {\n        \"bookingid\": 203\n    },\n    {\n        \"bookingid\": 546\n    },\n    {\n        \"bookingid\": 349\n    },\n    {\n        \"bookingid\": 425\n    },\n    {\n        \"bookingid\": 263\n    },\n    {\n        \"bookingid\": 846\n    },\n    {\n        \"bookingid\": 358\n    },\n    {\n        \"bookingid\": 281\n    },\n    {\n        \"bookingid\": 665\n    },\n    {\n        \"bookingid\": 789\n    },\n    {\n        \"bookingid\": 167\n    },\n    {\n        \"bookingid\": 78\n    },\n    {\n        \"bookingid\": 732\n    },\n    {\n        \"bookingid\": 868\n    },\n    {\n        \"bookingid\": 671\n    },\n    {\n        \"bookingid\": 511\n    },\n    {\n        \"bookingid\": 613\n    },\n    {\n        \"bookingid\": 867\n    },\n    {\n        \"bookingid\": 328\n    },\n    {\n        \"bookingid\": 81\n    },\n    {\n        \"bookingid\": 323\n    },\n    {\n        \"bookingid\": 840\n    },\n    {\n        \"bookingid\": 462\n    },\n    {\n        \"bookingid\": 311\n    },\n    {\n        \"bookingid\": 879\n    },\n    {\n        \"bookingid\": 702\n    },\n    {\n        \"bookingid\": 333\n    },\n    {\n        \"bookingid\": 325\n    },\n    {\n        \"bookingid\": 848\n    },\n    {\n        \"bookingid\": 799\n    },\n    {\n        \"bookingid\": 173\n    },\n    {\n        \"bookingid\": 674\n    },\n    {\n        \"bookingid\": 403\n    },\n    {\n        \"bookingid\": 127\n    },\n    {\n        \"bookingid\": 326\n    },\n    {\n        \"bookingid\": 371\n    },\n    {\n        \"bookingid\": 758\n    },\n    {\n        \"bookingid\": 183\n    },\n    {\n        \"bookingid\": 290\n    },\n    {\n        \"bookingid\": 50\n    },\n    {\n        \"bookingid\": 218\n    },\n    {\n        \"bookingid\": 424\n    },\n    {\n        \"bookingid\": 401\n    },\n    {\n        \"bookingid\": 42\n    },\n    {\n        \"bookingid\": 367\n    },\n    {\n        \"bookingid\": 293\n    },\n    {\n        \"bookingid\": 829\n    },\n    {\n        \"bookingid\": 350\n    },\n    {\n        \"bookingid\": 831\n    },\n    {\n        \"bookingid\": 159\n    },\n    {\n        \"bookingid\": 768\n    },\n    {\n        \"bookingid\": 733\n    },\n    {\n        \"bookingid\": 875\n    },\n    {\n        \"bookingid\": 98\n    },\n    {\n        \"bookingid\": 433\n    },\n    {\n        \"bookingid\": 118\n    },\n    {\n        \"bookingid\": 616\n    },\n    {\n        \"bookingid\": 610\n    },\n    {\n        \"bookingid\": 724\n    },\n    {\n        \"bookingid\": 151\n    },\n    {\n        \"bookingid\": 141\n    },\n    {\n        \"bookingid\": 109\n    },\n    {\n        \"bookingid\": 47\n    },\n    {\n        \"bookingid\": 705\n    },\n    {\n        \"bookingid\": 211\n    },\n    {\n        \"bookingid\": 556\n    },\n    {\n        \"bookingid\": 387\n    },\n    {\n        \"bookingid\": 3\n    },\n    {\n        \"bookingid\": 651\n    },\n    {\n        \"bookingid\": 739\n    },\n    {\n        \"bookingid\": 844\n    },\n    {\n        \"bookingid\": 501\n    },\n    {\n        \"bookingid\": 628\n    },\n    {\n        \"bookingid\": 645\n    },\n    {\n        \"bookingid\": 640\n    },\n    {\n        \"bookingid\": 285\n    },\n    {\n        \"bookingid\": 579\n    },\n    {\n        \"bookingid\": 416\n    },\n    {\n        \"bookingid\": 413\n    },\n    {\n        \"bookingid\": 818\n    },\n    {\n        \"bookingid\": 69\n    },\n    {\n        \"bookingid\": 692\n    },\n    {\n        \"bookingid\": 788\n    },\n    {\n        \"bookingid\": 778\n    },\n    {\n        \"bookingid\": 229\n    },\n    {\n        \"bookingid\": 136\n    },\n    {\n        \"bookingid\": 756\n    },\n    {\n        \"bookingid\": 393\n    },\n    {\n        \"bookingid\": 881\n    },\n    {\n        \"bookingid\": 59\n    },\n    {\n        \"bookingid\": 701\n    },\n    {\n        \"bookingid\": 477\n    },\n    {\n        \"bookingid\": 187\n    },\n    {\n        \"bookingid\": 886\n    },\n    {\n        \"bookingid\": 571\n    },\n    {\n        \"bookingid\": 852\n    },\n    {\n        \"bookingid\": 186\n    },\n    {\n        \"bookingid\": 680\n    },\n    {\n        \"bookingid\": 210\n    },\n    {\n        \"bookingid\": 604\n    },\n    {\n        \"bookingid\": 312\n    },\n    {\n        \"bookingid\": 52\n    },\n    {\n        \"bookingid\": 557\n    },\n    {\n        \"bookingid\": 719\n    },\n    {\n        \"bookingid\": 15\n    },\n    {\n        \"bookingid\": 639\n    },\n    {\n        \"bookingid\": 828\n    },\n    {\n        \"bookingid\": 475\n    },\n    {\n        \"bookingid\": 656\n    },\n    {\n        \"bookingid\": 317\n    },\n    {\n        \"bookingid\": 70\n    },\n    {\n        \"bookingid\": 21\n    },\n    {\n        \"bookingid\": 238\n    },\n    {\n        \"bookingid\": 695\n    },\n    {\n        \"bookingid\": 766\n    },\n    {\n        \"bookingid\": 12\n    },\n    {\n        \"bookingid\": 357\n    },\n    {\n        \"bookingid\": 48\n    },\n    {\n        \"bookingid\": 274\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create a Booking",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Test for status code",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"//check if the response body is a valid JSON",
+									"pm.test(\"Response body is a JSON\", function () {",
+									"    pm.response.to.be.json; ",
+									"});",
+									"",
+									"// Test for successful creation of a booking",
+									"pm.test(\"booking record has expected fields\", function () {",
+									"    const booking = pm.response.json().booking;  ",
+									"    pm.expect(booking).to.have.property('firstname', 'Jim');",
+									"    pm.expect(booking).to.have.property('lastname', 'Brown');",
+									"    pm.expect(booking).to.have.property('bookingdates');",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstname\" : \"Jim\",\n    \"lastname\" : \"Brown\",\n    \"totalprice\" : 111,\n    \"depositpaid\" : true,\n    \"bookingdates\" : {\n        \"checkin\" : \"2018-01-01\",\n        \"checkout\" : \"2019-01-01\"\n    },\n    \"additionalneeds\" : \"Breakfast\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://restful-booker.herokuapp.com/booking",
+							"protocol": "https",
+							"host": [
+								"restful-booker",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"booking"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstname\" : \"Jim\",\n    \"lastname\" : \"Brown\",\n    \"totalprice\" : 111,\n    \"depositpaid\" : true,\n    \"bookingdates\" : {\n        \"checkin\" : \"2018-01-01\",\n        \"checkout\" : \"2019-01-01\"\n    },\n    \"additionalneeds\" : \"Breakfast\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://restful-booker.herokuapp.com/booking",
+									"protocol": "https",
+									"host": [
+										"restful-booker",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"booking"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Report-To",
+									"value": "{\"group\":\"heroku-nel\",\"max_age\":3600,\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?ts=1708917661&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=kqh4fBVgfUJ%2BESMsMH9TK3lNre2K07CF2%2FFNRdhBltM%3D\"}]}"
+								},
+								{
+									"key": "Reporting-Endpoints",
+									"value": "heroku-nel=https://nel.heroku.com/reports?ts=1708917661&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=kqh4fBVgfUJ%2BESMsMH9TK3lNre2K07CF2%2FFNRdhBltM%3D"
+								},
+								{
+									"key": "Nel",
+									"value": "{\"report_to\":\"heroku-nel\",\"max_age\":3600,\"success_fraction\":0.005,\"failure_fraction\":0.05,\"response_headers\":[\"Via\"]}"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "196"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"c4-MONk4wgUj4qcU9/1RSywaaGsw1k\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 26 Feb 2024 03:21:01 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"bookingid\": 289,\n    \"booking\": {\n        \"firstname\": \"Jim\",\n        \"lastname\": \"Brown\",\n        \"totalprice\": 111,\n        \"depositpaid\": true,\n        \"bookingdates\": {\n            \"checkin\": \"2018-01-01\",\n            \"checkout\": \"2019-01-01\"\n        },\n        \"additionalneeds\": \"Breakfast\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update a booking",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstname\" : \"James\",\n    \"lastname\" : \"Brown\",\n    \"totalprice\" : 111,\n    \"depositpaid\" : true,\n    \"bookingdates\" : {\n        \"checkin\" : \"2018-01-01\",\n        \"checkout\" : \"2024-01-01\"\n    },\n    \"additionalneeds\" : \"Breakfast\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://restful-booker.herokuapp.com/booking/:id",
+							"protocol": "https",
+							"host": [
+								"restful-booker",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"booking",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "289"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update a booking",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstname\" : \"James\",\n    \"lastname\" : \"Brown\",\n    \"totalprice\" : 111,\n    \"depositpaid\" : true,\n    \"bookingdates\" : {\n        \"checkin\" : \"2018-01-01\",\n        \"checkout\" : \"2024-01-01\"\n    },\n    \"additionalneeds\" : \"Breakfast\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://restful-booker.herokuapp.com/booking/:id",
+									"protocol": "https",
+									"host": [
+										"restful-booker",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"booking",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "289"
+										}
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Report-To",
+									"value": "{\"group\":\"heroku-nel\",\"max_age\":3600,\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?ts=1708917717&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=euWpjP0vzAct9Koo9OT3K7E%2Fq9ZP2HiPUvsqQRlHnbU%3D\"}]}"
+								},
+								{
+									"key": "Reporting-Endpoints",
+									"value": "heroku-nel=https://nel.heroku.com/reports?ts=1708917717&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=euWpjP0vzAct9Koo9OT3K7E%2Fq9ZP2HiPUvsqQRlHnbU%3D"
+								},
+								{
+									"key": "Nel",
+									"value": "{\"report_to\":\"heroku-nel\",\"max_age\":3600,\"success_fraction\":0.005,\"failure_fraction\":0.05,\"response_headers\":[\"Via\"]}"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "9"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"9-PatfYBLj4Um1qTm5zrukoLhNyPU\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 26 Feb 2024 03:21:57 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "Forbidden"
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "Token",
+			"value": ""
+		}
+	]
+}

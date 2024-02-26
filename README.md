@@ -1,9 +1,9 @@
 # Carry1st QA ASSESSMENT SUBMISSION
 
-This respsitory contains the solutions for the QA Assessment
+This repository contains the solutions for the QA Assessment
 
 ## Section A, (Test Case Writing, Exploratory Test and Defect Reporting.)
-The solutions to question 1 and 2 can be found in the google document below;
+The solutions to questions 1 and 2 can be found in the Google document below;
 https://docs.google.com/document/d/1OgkBvmHdO2wNN7nqF1wB4d_9D_Nm1Lt5-74ERSG7Ecg/edit?usp=sharing
 
 ## Section B (Web Automation with Cypress)
@@ -40,6 +40,6 @@ The folder "API_Automation_with_Postman contains solutions for the API Automatio
 
 1. Clone the repository and navigate to the "API_Automation_With_Postman" directory.
 
-2. The folder contains a Postman collection and a Postman Environment files. Both files have to be imported for smooth test excecution.
+2. The folder contains a Postman collection and a Postman Environment file. Both files have to be imported for smooth test execution.
 
-3. The solution to each questions are contained in the different folders of the Postman collection files.
+3. The solutions to each question are contained in the different folders of the Postman collection files.
